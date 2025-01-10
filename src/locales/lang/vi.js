@@ -1,0 +1,113 @@
+export default {
+  route: {
+    home: 'Trang chủ',
+    permissionPages: 'Quản lí cấp quyền',
+    users: 'Quản lí người dùng',
+    roles: 'Quản lý vai trò',
+    menus: 'Quản lí thực đơn',
+    casbin: 'Quản lí giao diện',
+    purchaseorder: 'Đơn mua hàng',
+    orderconfirm: 'Xác nhận đơn hàng',
+    confirm: 'Xác nhận',
+    nosize: 'Không Size',
+    nosizePO: 'D2COMM (PO)',
+    size: 'Có Size (RY)',
+    sizeS: 'Có Size (Size)',
+    printlabelqr: 'In nhãn QR',
+    qrcode: 'Mã QR',
+    errorPages: 'Lỗi trang',
+    page401: '401',
+    page404: '404',
+  },
+  navbar: {
+    logOut: 'Đăng xuất',
+    chagePassword: 'Đổi mật khẩu',
+    full: 'Toàn màn hình',
+    noFull: 'Đăng xuất toàn màn hình',
+    refresh: 'Chỉnh lí lặp lại',
+    fold: 'Thu hồi',
+    unfold: 'Triển khai',
+  },
+  login: {
+    title: 'Đăng nhập',
+    rules: {
+      username: 'Vui lòng nhập tên người sử dụng',
+      password: 'Vui lòng nhập mật khẩu',
+    },
+    loginBtn: 'Đăng nhập',
+    desc: 'Công Ty TNHH Tỷ Bách',
+    username: 'Tài khoản',
+    password: 'Mật khẩu',
+    rememberPwd: 'Lưu mật khẩu',
+    forgotPwd: 'Quên mật khẩu',
+  },
+  tagsView: {
+    refresh: 'Làm mới trang',
+    closeLeft: 'Đóng bên trái',
+    closeRight: 'Đóng bên phải',
+    closeOthers: 'Đóng khác',
+    closeAll: 'Đóng tất cả',
+  },
+  sayHi: {
+    early: 'Chào buổi sáng',
+    morning: '上Chào buổi sáng',
+    noon: 'Chào buổi trưa',
+    afternoon: 'Chào buổi chiều',
+    evening: 'Chào buổi tối',
+  },
+  notice: {
+    message: 'Chào mừng đăng nhập',
+  },
+  tabs: {
+    notice: 'Thông báo',
+    message: 'Tin nhắn',
+    email: 'email',
+  },
+  indexPage: {
+    descTitle: 'Bắt đầu ngày làm việc của bạn nào！',
+  },
+  errorPages: {
+    title: 'Xin lỗi!',
+    btn: 'Trở về trang đầu',
+    404: {
+      desc: 'Trang này không tồn tại...',
+      remark:
+        'Vui lòng kiểm tra xem URL bạn đã nhập có chính xác hay không hoặc nhấp vào nút bên dưới để quay lại trang chủ',
+    },
+    401: {
+      desc: 'Bạn không có quyền truy cập trang này...',
+      remark:
+        'Vui lòng liên hệ với nhân viên quản lí, hoặc bấm vào nút bên dưới để trở về trang chủ',
+    },
+  },
+  confirm: {
+    title: 'Gợi ý thao tác',
+    exitMessage: 'Bạn xác nhận muốn thoát',
+    deleteMessage: 'Bạn xác nhận muốn xóa',
+  },
+  btn: {
+    confirm: 'Xác nhận',
+    cancel: 'Hủy bỏ',
+    create: 'Thiết lập',
+    edit: 'Biên soạn',
+    delete: 'Xóa',
+    submit: 'Gửi đi',
+    printall: 'In tất cả',
+    save: 'Lưu',
+    query: 'Truy vấn',
+  },
+  request: {
+    apiErrorWithCode: 'API {code} Bất thường, vui lòng liên hệ với nhân viên quản lý hệ thống',
+    reLoginTitle: 'Đăng nhập lại',
+    loginInvalid: 'Đăng nhập không hợp lệ, vui lòng đăng nhập lại',
+    backendError: 'Đoạn cuối bất thường, vui lòng liên hệ vớinhân viên quản lí hệ thống',
+    accessFailed: 'Kết nối API không bình thường, vui lòng liên hệ với nhân viên quản lý hệ thống',
+    accessTimeout: 'Đã hết thời gian kết nối API, vui lòng liên hệ với nhân viên quản lý hệ thống',
+    unknownError: ' API không xác định bất thường, vui lòng liên hệ với nhân viên quản lý hệ thống',
+    tokenError:
+      'Ngoại lệ mã thông báo, {token} không được trả lại chính xác, vui lòng liên hệ với nhân viên quản lý hệ thống',
+    loginFailed: 'Xác minh không thành công, vui lòng đăng nhập lại',
+    userInterfaceError:
+      'Giao diện người dùng bất thường, vui lòng liên hệ với nhân viên quản lý hệ thống',
+  },
+};

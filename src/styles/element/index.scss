@@ -1,0 +1,13 @@
+@forward 'element-plus/theme-chalk/src/common/var.scss' with (
+  $colors: (
+    'primary': (
+      'base': #7e9cff,
+    ),
+  )
+);
+
+@media screen and (min-width: 220px) and (max-width: 600px) {
+  .el-dialog {
+    width: 100% !important;
+  }
+}

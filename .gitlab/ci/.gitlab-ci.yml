@@ -1,0 +1,42 @@
+image: node:18.18.0-alpine
+
+stages:
+  - build
+  - deploy
+
+cache:
+  paths:
+    - node_modules
+
+build:
+  stage: build
+  script:
+    - npm install -g pnpm
+    - pnpm install
+    - pnpm build
+  artifacts:
+    paths:
+      - dist
+    expire_in: 1 day
+  retry: 2
+  only:
+    - master
+
+deploy:
+  stage: deploy
+  before_script:
+    - 'which ssh-agent || ( apk add --update --no-cache openssh )'
+    - eval $(ssh-agent -s)
+    - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
+    - mkdir -p ~/.ssh
+    - chmod 700 ~/.ssh
+    - echo "$SSH_KNOWN_HOSTS" > ~/.ssh/known_hosts
+    - ssh-keyscan -H 192.168.23.20 >> ~/.ssh/known_hosts
+    - chmod 644 ~/.ssh/known_hosts
+  script:
+    - ssh root@192.168.23.20 'rm -rf /root/Docker/Nginx/nginx_html/tyxuan-web-printlabel-bak'
+    - ssh root@192.168.23.20 'mv /root/Docker/Nginx/nginx_html/tyxuan-web-printlabel /root/Docker/Nginx/nginx_html/tyxuan-web-printlabel-bak'
+    - scp -r dist root@192.168.23.20:/root/Docker/Nginx/nginx_html/tyxuan-web-printlabel
+  retry: 2
+  only:
+    - master
