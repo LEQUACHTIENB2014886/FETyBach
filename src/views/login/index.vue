@@ -116,7 +116,8 @@ const handleClick = (val) => {
       width: 50vw;
       height: 93vh;
       .form-warp {
-        width: 400px;
+        width: 380px;
+        height: 280px;
         padding: 1rem 3rem 0 3rem;
         margin: auto;
         background-color: #fff;
